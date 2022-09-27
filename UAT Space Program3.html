@@ -1,0 +1,64 @@
+<!--Jason Hardison-->
+<!DOCTYPE html>
+<!--makes the language english-->
+<html lang="en">
+<head>
+    <title>UAT Space Program</title>
+</head>
+<body>
+    <!--link to code.js-->
+    <script src="code.js"></script>
+    <!--puts the image in the website-->
+    <img src="https://www.bing.com/images/search?view=detailV2&insightstoken=bcid_sxPC3nlGr6EEY150JWTvb41qyKp4.....6k*ccid_E8LeeUav&form=ANCMS1&iss=SBIUPLOADGET&selectedindex=0&id=1208225737&ccid=E8LeeUav&exph=240&expw=240&vt=2&sim=11" style="width: 240px;height: 240px">
+    <style type="text/css">
+        p {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+    <!--the header-->
+    <h1>
+        UAT Space Program
+    </h1>
+    <!--makes alert and document wrie-->
+    <script language = "javascript" type = "text/javascript">
+        alert("Warning, proceed at your own risk")
+        document.write("Test of document write function")
+    </script>
+    <!--paragraph-->
+    <p>
+        Test of Paragraph write function
+    </p>
+    <!--the "count down" with heavy finger quotes-->
+    <script type="text/javascript">
+        var countDown = 10
+        document.getElementById("DisplayCountdown").innerHTML = countDown;
+        function runCountdown()
+{
+ countDown --;
+if(countDown != 5)
+{
+    document.getElementById("countdownlabel").innerHTML = countDown;
+}
+else
+{
+    document.getElementById("countdownhalflabel").innerHTML = "Warning Less than ½ way to launch, time left = insert variable here";
+}
+if(countDown != 0)
+{
+    document.getElementById("countdownlabel").innerHTML = countDown;
+}
+else
+{
+    document.getElementById("blastoffLabel").innerHTML = "Blast Off";
+}
+}
+    </script>
+    <!--shows the number-->
+    <p id="countdownlabel"></p>
+    <p id="countdownhalflabel"></p>
+    <!--shows blast off-->
+    <p id="blastoffLabel"></p>
+    <!--adds Button that says start which when you press to start the count down-->
+    <button id="b"onclick = "runCountdown()">Start</button>
+</body>
+</html>
