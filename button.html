@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function hideStop()
+        {
+            document.getElementById("stop").style.opacity = 0;
+        }
+    </script>
+    <script type="text/javascript">
+        function showStop()
+        {
+            document.getElementById("stop").style.opacity = 1;
+        }
+    </script>
+    <script type="text/javascript">
+        function hideStart()
+        {
+            document.getElementById("start").style.opacity = 0;
+        }
+    </script>
+    <script type="text/javascript">
+        function showStart()
+        {
+            document.getElementById("start").style.opacity = 1;
+        }
+    </script>
+</head>
+<body>
+    
+    <div id="btndiv" style="margin-left:1000px; margin-top:500px;position:absolute;">
+        <button id="start" onclick="this.style.backgroundColor='green';hideStart();this.style.color='red';showStop();">START</button>
+
+        <div id="btndiv1" style="margin-left:1000px; margin-top:500px;position:absolute;"></div>
+        <button id="stop" onclick="this.style.backgroundColor='red';hideStop();this.style.color='green';showStart();">STOP</button>
+        
+
+    </div>
+</body>
+</html>
