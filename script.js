@@ -1,6 +1,8 @@
+//the button is edited in this file
 let btnGet = document.querySelector('button');
+//the table is made
 let myTable = document.querySelector('#table');
-
+//the data for the table
 let data= [
     {DataType:'Time elapse:', Reading:'17 seconds'},
     {DataType:'Latitude:', Reading:'0 degree'},
@@ -24,7 +26,9 @@ let data= [
     {DataType:'Gyro Y:', Reading:'0.01'},
     {DataType:'Gyro Z:', Reading:'-0.4'}
 ]
+//makes the headers of the table
 let headers = ['DataType','Reading'];
+//makes the tables appear by clicking it
 btnGet.addEventListener('click', () => {
     let table = document.createElement('table');
     let headerRow = document.createElement('tr');
@@ -35,6 +39,7 @@ btnGet.addEventListener('click', () => {
         headerRow.appendChild(header);
     });
     table.appendChild(headerRow);
+    //puts the rest of the data in the table
     data.forEach(emp => {
         let row = document.createElement('tr');
         Object.values(emp).forEach(text => {
