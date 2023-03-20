@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--Jason Hardison-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center"> Login </h1>          
+<form name="RegForm" action="UAT Space Program3.html" onsubmit="return UAT_Space_Program3"> 
+    <p>First And Last Name: <input type="text" size=65 name="Name"> </p><br>
+    <input type = "submit" formaction="space operations login.html" value = "Enter" onclick="validateName()"> 
+    <script type = "text/javascript">
+        function validateName() {
+            var nameElement = document.getElementById("Name");
+            while (nameElement.innerHTML.length > 20) {
+                alert("Please input a string less than 20 characters long."); 
+            } 
+        }
+    </script>
+     <p>Badge Number(three or fewer digits): <input type="text" size=65 name="Password"> </p><br>
+     <input type = "submit"  formaction="space operations login.html" value = "Enter" onclick="validatePass()"> 
+     <script type="text/javascript">
+        function validatePass() {
+            var badgeElement = document.getElementById("Password");
+            do {
+                alert("Please input a number less than or equal to 3 digits long."); 
+            } while (badgeElement.innerHTML.length <= 3);
+            alert(badgeElement);
+        }
+        //Declarations 
+        var sumOfnumbers = 0;
+        var numberOfLoops = 10;
+        //var counter = 1;
+   //do {some statement} while (condition is not met)
+        do {
+        
+            sumOfnumbers += 1;//
+           // counter++;  +; 
+           // alert(sumOfnumbers)
+               // }
+           } while (sumOfnumbers <=numberOfLoops - 1); //counter <=numberOfLoops
+       
+    </script>
+  
+    <p><input type="submit" value="Submit" name="Submit">     
+        <input type="reset" value="Reset" name="Reset">  
+    </p>     
+</form>
+</body>
+</html>
