@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Space Program</title>
+	<style>
+		body {
+			background-image: linear-gradient(to bottom, #87CEEB, #ADD8E6);
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+        img {
+            mix-blend-mode: multiply;
+        }
+
+		table {
+			margin: 50px auto;
+			border-collapse: collapse;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		th {
+			background-color: #00308F;
+			color: white;
+			padding: 10px;
+			text-align: left;
+		}
+
+		td {
+			padding: 10px;
+			text-align: left;
+		}
+
+        form.submit{
+            background-color: white;
+            color: black;
+            border: 2px solid royalblue;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+		button.start-btn {
+            background-color: royalblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+
+		}
+
+		button.stop-btn {
+			background-color: white;
+            color: black;
+            border: 2px solid royalblue;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+		}
+
+        .button-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>UAT Space Program</h1>
+	<img src="https://www.uattech.com/hs-fs/hubfs/UAT%20Black.png?width=391&name=UAT%20Black.png" alt="Space Program Logo" style="display: block; margin: 0 auto;">
+    <table>
+        <thead>
+            <tr>
+                <th>Data Field</th>
+                <th>Reading</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Time Elapsed (s)</td>
+                <td id="timer">0 seconds</td>
+            </tr>
+            <tr>
+                <td>Longitude</td>
+                <td id="longitude">0</td>
+            </tr>
+            <tr>
+                <td>Latitude</td>
+                <td id="latitude">0</td>
+            </tr>
+            <tr>
+                <td>GPS Altitude</td>
+                <td id="gps-altitude">0</td>
+            </tr>
+            <tr>
+                <td>BMP Sensor Altitude</td>
+                <td id="bmp-sensor-altitude">30383.04</td>
+            </tr>
+            <tr>
+                <td>BMP Sensor Pressure</td>
+                <td id="bmp-sensor-pressure">2.34</td>
+            </tr>
+            <tr>
+                <td>BMP Sensor Temperature</td>
+                <td id="bmp-sensor-temperature">0</td>
+            </tr>
+            <tr>
+                <td>Digital Sensor Temperature</td>
+                <td id="digital-sensor-temperature">24.12</td>
+            </tr>
+            <tr>
+                <td>CSS Sensor Temperature</td>
+                <td id="css-sensor-temperature">25</td>
+            </tr>
+            <tr>
+                <td>CSS Sensor eO2</td>
+                <td id="css-sensor-eo2">400</td>
+            </tr>
+            <tr>
+                <td>CSS Sensor TvOC</td>
+                <td id="css-sensor-tvoc">0</td>
+            </tr>
+            <tr>
+                <td>UV</td>
+                <td id="uv">0</td>
+            </tr>
+            <tr>
+                <td>Accelerator X</td>
+                <td id="accelerator-x">-0.87</td>
+            </tr>
+            <tr>
+                <td>Accelerator Y</td>
+                <td id="accelerator-y">-0.02</td>
+            </tr>
+            <tr>
+                <td>Accelerator Z</td>
+                <td id="accelerator-z">9.61</td>
+            </tr>
+            <tr>
+                <td>Magnetic X</td>
+                <td id="magnetic-x">0.13</td>
+            </tr>
+            <tr>
+                <td>Magnetic Y</td>
+                <td id="magnetic-y">0.57</td>
+            </tr>
+            <tr>
+                <td>Magnetic Z</td>
+                <td id="magnetic-z">-0.24</td>
+            </tr>
+            <tr>
+                <td>Gyro X</td>
+                <td id="gyro-x">4.66</td>
+            </tr>
+            <tr>
+                <td>Gyro Y</td>
+                <td id="gyro-y">0.01</td>
+            </tr>
+            <tr>
+                <td>Gyro Z</td>
+                <td id="gyro-z">-0.4</td>
+            </tr>
+        </tbody>
+    </table>
+    
+        </div>
+        <form name="RegForm" action="UAT Space Program3.html" onsubmit="return UAT_Space_Program3">
+            <p><input type="submit" value="submit" name="enter"> UAT Space Page</p>
+        </form>
+        <!-- Start/Stop buttons -->
+        <div class="button-container">
+            <button class="start-btn" onclick="startTimer()">Start</button>
+            <button class="stop-btn" onclick="stopTimer()">Stop</button>
+        </div>
+        <!-- JavaScript code -->
+        <script>
+            var timer = document.getElementById("timer");
+            var seconds = 0;
+            var timerId;
+    
+            function startTimer() {
+                timerId = setInterval(function() {
+                    seconds++;
+                    timer.innerHTML = seconds;
+                }, 1000);
+            }
+    
+            function stopTimer() {
+                clearInterval(timerId);
+            }
+        </script>
+    </body>
+    </html>
+    ``
